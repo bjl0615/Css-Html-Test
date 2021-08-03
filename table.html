@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="EUC-KR">
+    <style>
+        table {
+            border: 2px dashed red;
+            width: 600px;
+            height: 500px;
+        }
+        th{
+            background-color: red;
+        }
+        tbody > tr > td{
+            border: 1px solid black;
+            background-color: aqua;
+            text-align: center;
+        }
+        tfoot > tr > td{
+            background-color: orange;
+            font-size: 20px;
+            text-align: center;
+        }
+        .rowspan {
+            width : 300px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Month Savings</caption>    
+        <thead>
+            <tr><th colspan="2">colsapn</th><th>Savings</th></tr>
+        </thead>  
+        <tfoot>
+            <tr><td>Sum</td><td>$180</td><td colspan="2">asd</td></tr>
+        </tfoot>
+        <tbody>
+            <tr></tr>
+            <tr><td>January</td><td>$100</td><td rowspan="2" class="rowspan">rowspan</td></tr>
+            <tr><td>Febuary</td><td>$80</td><td>adasd</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>
