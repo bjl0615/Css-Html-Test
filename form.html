@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="EUC-KR">
+    <style>
+        fieldset{
+            background-color: red;
+            border : 4px dashed blue;
+        }
+        legend{
+            width : 50px;
+            height: 50px;
+            border: 3px dashed black;
+            background-color: yellow;
+        }
+        .required,
+        .add-on,
+        .button
+        {
+            color: black;
+            font-size: 10px;
+            padding-top: 15px;
+            text-align: center;
+        }
+
+        .contents_title {
+            margin-top: 50px;
+        }
+
+        .contents2{
+            margin-left : 40px;
+            margin-top: -20px;
+        }
+
+        .title_1 {
+            color: cyan;
+        }
+        .additional content{
+            padding-left: 50px;
+        }
+        .hobby,
+        .myself{
+            margin-top : -10px;
+            margin-left: 50px;
+        }
+        .myself{
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/text.html" method="get">
+        <fieldset>
+            <legend>
+                <div class="required">필수 항목</div>
+            </legend>
+            <div class="title_1">
+                <label for="name" >이름 : </label>
+                <input type="text" placeholder="홍길동" id="name"> <br>
+                <label for="userid">아이디 : </label>
+                <input type="text" id="userid" placeholder="영문으로만 입력해 주세요"><br>
+                <label for="userpw">비밀번호 : </label>
+                <input type="password" id="userpw" placeholder="비밀번호를 영문으로 입력해주세요"><br>
+                성별 :
+                <label for="women">여성 : </label>
+                <input type="radio" id="women" name="gender" checked>
+                <label for="men">남성 : </label>
+                <input type="radio" id="men" name="gender">
+            </div>
+        </fieldset>
+
+        <fieldset class="contents_title">
+            <legend>
+                <div class="add-on">부가 항목</div>
+            </legend>
+            <div class="contents2">
+                <h3>취미 생활</h3>
+                    <div class="hobby">
+                        <label for="movie">영화 감상</label> 
+                        <input type="checkbox" name="hobby" id="movie" checked><br>
+                        <label for="book">독서</label>
+                        <input type="checkbox" name="hobby" id="book"><br>
+                        <label for="sports">운동</label>
+                        <input type="checkbox" name="hobby" id="sports"> 
+                    </div>                   
+                        <label for="myself"><h3>자기 소개</h3></label>
+                    <div class="myself">
+                        <textarea cols="30" rows="5" id="myself"></textarea>
+                    </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="contents_title">
+            <legend>
+                <div class="button">버튼</div>
+            </legend>
+            <button type="submit" ><img src="./images/login.png" alt="login" width=100px height="50px"></button>  
+            <button type="reset" ><img src="./images/reset.png" alt="rest" width=100px height= "50px"></button>
+        </fieldset>
+    </form>
+</body>
+</html>
